@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> 
+    <title>MedReminder</title> 
     <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
     <script src="ics.js/ics.deps.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/calendar-logo.ico" type="image/x-icon">
 
 </head>
 
 
 <body>
 
-<h1>Prescription Info Form</h1>
-<p>Input prescription info to get a recurring event on your favorite digital calendar.</p>
-
+<header>
+<h1> <img class="logo" src="images/calendar-logo.png" alt=""> <strong>MedReminderICS</strong></h1>
+<p>Input prescription info to receive .ics calendar file to see when you need a medication refill. Upload it to your favorite digital calendar. </p>
+</header>
 <!-- Prescription Info Form -->
 <form id="prescription-form">
     <!-- Form of Medicine -->
@@ -26,16 +28,16 @@
     </select><br> -->
     <!-- Name -->
     <label for="pname" title="Name of prescription or personal anagram">Prescription Name:</label><br>
-    <input type="text" id="pname" name="pname"><br>
+    <input class="text-input"  type="text" id="pname" name="pname"><br>
     <!-- Total Quantity, number of pills, mg of liquid -->
     <label for="qty" title="Total number of pills, mg of liquid, g of medication">Quantity of Medication:</label><br>
-    <input type="number" id="qty" name="qty"><br>
+    <input class="text-input"  type="number" id="qty" name="qty"><br>
     <!-- Amount of Medication Taken per Dosage, number of pills, mg of liquid -->
     <label for="amount" title="How much of the quantity is taken per dose?">Medication Taken per Dosage:</label><br>
-    <input type="number" id="amount" name="amount"><br>
+    <input class="text-input"  type="number" id="amount" name="amount"><br>
     <!-- Frequency of Dosage -->
     <label for="freq" title="How often is a dose taken?">Dosage Frequency: </label><br>
-    <input type="number" id="freq_num" name="freq"> time(s) per 
+    <input class="text-input"  type="number" id="freq_num" name="freq"> time(s) per 
     <select name="freq_period" id="freq_period">
         <option value="day">day</option>
         <option value="week">week</option>
@@ -44,14 +46,14 @@
 
     <!-- Number of Refills -->
     <label for="refills" title="How many refills left in current prescription?">Number of Refills:</label><br>
-    <input type="number" id="refills" name="refills"><br>
+    <input class="text-input" type="number" id="refills" name="refills"><br>
 
     <!-- Daily Reminder Prompt -->
     <input type="checkbox" id="checkbox"><label title="What time(s) do you want to be reminded?">Medication Reminders?</label><br>
     <div id="datePlannerContainer"></div>
 
     <!-- Submit -->
-    <button type="submit">Get Calendar</button>
+    <button type="submit">Generate</button>
 </form>
 
 

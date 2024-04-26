@@ -11,6 +11,7 @@ document.getElementById('checkbox').addEventListener('change', function() {
       for (var i = 0; i < (freqValue); i++) {
         var textBox = document.createElement('input');
         textBox.type = 'time';
+        textBox.class = 'time-input';
         textBox.id = 'time' + (i + 1);
         textBox.placeholder = 'Text Box ' + (i + 1);
         datePlannerContainer.appendChild(textBox);
